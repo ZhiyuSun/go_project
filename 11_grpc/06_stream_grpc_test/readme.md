@@ -1,0 +1,1 @@
+E:\mycode\go_project\11_grpc\06_stream_grpc_test\proto>protoc -I . stream.proto --go_out=plugins=grpc:.
