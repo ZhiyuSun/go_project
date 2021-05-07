@@ -73,7 +73,7 @@ func main()  {
 		as = "abc"
 		az
 	)
-	fmt.Println(ax, ay, as, az)
+	fmt.Println(ax, ay, as, az) // 16 16 abc abc
 
 	// 1. 常量的数据类型值可以是布尔，数字 和字符串
 	// 2. 不曾使用的常量，在编译的时候是不会报错
@@ -87,7 +87,7 @@ func main()  {
 	)
 	//0,1,2 本身不重要， 这三个值不一样
 	//iota 该常量的值等于上一个常量的表达式
-	fmt.Println(Book, Cloth, Phone, DeskTop)
+	fmt.Println(Book, Cloth, Phone, DeskTop) // 0 1 2 3
 
 	//iota你真的懂了吗？
 	// 1. iota只能在常量组中是使用。iota:常量计数器
@@ -97,7 +97,7 @@ func main()  {
 		F
 		M
 	)
-	fmt.Println(U, F, M)
+	fmt.Println(U, F, M) // 0 1 2
 
 	// 3. 没有表达式的常量定义复用上一行的表达式
 	// 4. 从第一行开始，iota从0逐行加一

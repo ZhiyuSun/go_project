@@ -19,8 +19,10 @@ func main()  {
 	fmt.Printf("%c\n", 97)
 	//在go中字符和字符串不是一种类型 字符类型是单引号 字符串是双引号
 	//fmt.Printf("%c", 97)
-	fmt.Printf("%T","孙") // string
-	fmt.Printf("%T",'孙') // int32
+	fmt.Printf("%T\n","孙") // string
+	fmt.Printf("%T\n",'孙') // int32
+	fmt.Printf("%T\n",'s') // int32
+	fmt.Printf("%T","ss") // string
 	//a := 1
 	//fmt.Println(a)
 }

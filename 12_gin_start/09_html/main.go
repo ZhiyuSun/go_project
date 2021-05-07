@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 )
 
-// go build main.go
+// go build 01_two_sum.go
 // main.exe
 func main() {
 	router := gin.Default()

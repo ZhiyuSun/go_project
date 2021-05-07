@@ -130,11 +130,11 @@ func main()  {
 	c12.setPrice1(1000)
 	fmt.Println(c12.Price) // 仍然为110，  为什么呢？ 语法糖 函数参数的传递是怎么传递的？ 结构体是值传递
 	Course.setPrice1(c12, 1000)
-	fmt.Println(c12.Price)
+	fmt.Println(c12.Price) // 仍然是100
 	c12.setPrice(2000)
-	fmt.Println(c12.Price)
+	fmt.Println(c12.Price) // 2000
 	(&c12).setPrice(1000) //修改c10的price? 为什么呢？ 语法糖 函数参数的传递是怎么传递的？ 结构体是值传递
-	fmt.Println(c12.Price)
+	fmt.Println(c12.Price) // 1000
 
 	//结构体的接收者有两种形式 1. 值传递 2. 指针传递 如果你想改结构体的值 如果结构体的数据很大
 	//go语言不支持继承 但是有办法能达到同样的效果 组合
