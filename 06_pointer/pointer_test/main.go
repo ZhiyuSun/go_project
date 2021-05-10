@@ -63,4 +63,10 @@ func main()  {
 	//指针变量中涉及到两个符号 & 和 *
 
 	//make， new， nil
+
+	// temp test
+	sun := [...]int{1,2,3}
+	zhi := &sun
+	fmt.Println(sun)
+	fmt.Println(zhi[1])
 }
