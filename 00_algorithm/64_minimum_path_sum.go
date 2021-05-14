@@ -1,0 +1,62 @@
+package main
+
+import "fmt"
+
+// 64. 最小路径和
+
+// 2021.05.12 我的解法
+func minPathSum(grid [][]int) int {
+	m, n := len(grid), len(grid[0])
+	for i := 1; i < m; i++ {
+		grid[i][0] += grid[i-1][0]
+	}
+	for j := 1; j < n; j++ {
+		grid[0][j] += grid[0][j-1]
+	}
+	for i := 1; i < m; i++ {
+		for j := 1; j < n; j++ {
+			if grid[i-1][j] > grid[i][j-1] {
+				grid[i][j] += grid[i][j-1]
+			} else {
+				grid[i][j] += grid[i-1][j]
+			}
+		}
+	}
+	return grid[m-1][n-1]
+}
+
+// 官方解法，注意入参范围的判断
+func minPathSum2(grid [][]int) int {
+	if len(grid) == 0 || len(grid[0]) == 0 {
+		return 0
+	}
+	rows, columns := len(grid), len(grid[0])
+	dp := make([][]int, rows)
+	for i := 0; i < len(dp); i++ {
+		dp[i] = make([]int, columns)
+	}
+	dp[0][0] = grid[0][0]
+	for i := 1; i < rows; i++ {
+		dp[i][0] = dp[i - 1][0] + grid[i][0]
+	}
+	for j := 1; j < columns; j++ {
+		dp[0][j] = dp[0][j - 1] + grid[0][j]
+	}
+	for i := 1; i < rows; i++ {
+		for j := 1; j < columns; j++ {
+			dp[i][j] = min(dp[i - 1][j], dp[i][j - 1]) + grid[i][j]
+		}
+	}
+	return dp[rows - 1][columns - 1]
+}
+
+func min(x, y int) int {
+	if x < y {
+		return x
+	}
+	return y
+}
+
+func main()  {
+	fmt.Println(minPathSum([][]int{{1,3,1}, {1,5,1}, {4,2,1}}))
+}
