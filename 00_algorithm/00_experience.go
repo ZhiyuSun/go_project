@@ -17,6 +17,11 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
+// 定义方向的方法
+type pair struct{ x, y int }
+
+var directions = []pair{{-1, 0}, {1, 0}, {0, -1}, {0, 1}} // 上下左右
+
 func main()  {
 
 	// 初始化slice的三种方法
@@ -136,4 +141,22 @@ func main()  {
 
 	// 二叉树的层序遍历时，长度要用额外的变量表示，否则go里面会产生动态更新
 
+	// 如果要比较三个数的大小
+	maxV := max(1, max(2, 3))
+	fmt.Println(maxV)
+
+	// 哈希表的构造方法
+	hashmap := map[int]int{}
+	//hashmap1 := make(map[int]int)
+	//var hashmap2 map[int]int
+	if _, ok := hashmap[1]; ok {
+		fmt.Println(1)
+	}
+}
+
+func max(x, y int) int {
+	if x > y {
+		return x
+	}
+	return y
 }
