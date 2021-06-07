@@ -152,6 +152,14 @@ func main()  {
 	if _, ok := hashmap[1]; ok {
 		fmt.Println(1)
 	}
+
+	// 28. 实现 strStr()
+	// 这里面有两个值得学的地方，一个是continue xxx，一个是遍历字符串用range
+	aString := "sun"
+	for i := range aString {
+		fmt.Println(i)
+	}
+
 }
 
 func max(x, y int) int {
