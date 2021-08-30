@@ -1,13 +1,17 @@
-学习资源：
-http://books.studygolang.com/
+# Go语言学习Demo
 
-
-
-一些常用命令：
-protoc -I . hello.proto --go_out=plugins=grpc:.
-
-
-go1.16以后出现go.mod file not found in current directory错误的解法：
-在外层敲命令，go mod init xxx
-
-
+- 00_algorithm: 数据结构和算法的Go实现
+- 01_variable: Go语言中的变量和常量
+    - 变量
+    - 常量
+- 02_basic: Go基础、运算、类型转换
+- 03_string: Go语言字符串和打印
+- 04_flow_control: Go语言的流程控制
+    - for
+    - if
+    - switch
+    - goto
+- 05_data_structure: Go语言的数据结构
+    - array
+- 06_pointer: 指针
+- 07_function: 函数
