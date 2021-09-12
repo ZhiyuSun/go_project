@@ -11,7 +11,8 @@ require (
 	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/golang/protobuf v1.5.2
 	github.com/pkg/errors v0.9.1
-	golang.org/x/sync v0.0.0-20190423024810-112230192c58
+	go.uber.org/zap v1.19.1
+	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
 	google.golang.org/grpc v1.37.0
 	google.golang.org/protobuf v1.26.0
 )

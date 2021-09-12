@@ -1,5 +1,7 @@
 # Go语言学习Demo
 
+项目要使用go modules的方式启动
+
 - 00_algorithm: 数据结构和算法的Go实现
 - 01_variable: Go语言中的变量和常量
     - 变量
@@ -15,3 +17,8 @@
     - array
 - 06_pointer: 指针
 - 07_function: 函数
+- 16_practive: go语言实战练习
+    - django_password: 核对Django密码
+    - jwt: jwt库
+    - json: json库
+    - gin: middleware和context的使用
