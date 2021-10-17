@@ -22,3 +22,4 @@
     - jwt: jwt库
     - json: json库
     - gin: middleware和context的使用
+    - %v: 测试%v和%+v和%#v的打印效果
