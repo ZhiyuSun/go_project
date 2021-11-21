@@ -23,3 +23,9 @@
     - json: json库
     - gin: middleware和context的使用
     - %v: 测试%v和%+v和%#v的打印效果
+    - compute: go语言中的计算
+    - map: go语言中的map
+    - regex: go语言中的正则
+    - trap: go语言新手常犯的错
+    - timetick: go语言中时间轮询
+- 17_tonybai：极客时间专栏《Tony Bai：Go语言第一课》
